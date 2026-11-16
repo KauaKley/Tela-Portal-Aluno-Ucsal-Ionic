@@ -1,0 +1,21 @@
+<ion-view view-title="Publicação"
+  ><ion-content class="padding"
+    ><main>
+      <a class="button button-positive button-small" ui-sref="portal.mural"
+        >Voltar ao mural</a
+      >
+      <article class="list card" ng-if="publicacao">
+        <div class="item item-text-wrap">
+          <h2>{{publicacao.titulo}}</h2>
+          <p>
+            {{publicacao.data}} ·
+            <span class="categoria">{{publicacao.categoria}}</span>
+          </p>
+        </div>
+        <img ng-src="{{publicacao.imagem}}" alt="" />
+        <div class="item item-text-wrap">{{publicacao.texto}}</div>
+      </article>
+      <p ng-if="!publicacao">Publicação indisponível.</p>
+    </main></ion-content
+  ></ion-view
+>

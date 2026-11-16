@@ -1,0 +1,27 @@
+<ion-view view-title="Mural"
+  ><ion-content class="padding"
+    ><main>
+      <article
+        class="list card"
+        ng-repeat="publicacao in publicacoes track by publicacao.id"
+      >
+        <div class="item item-text-wrap">
+          <h2>{{publicacao.titulo}}</h2>
+          <p>
+            {{publicacao.data}} ·
+            <span class="categoria">{{publicacao.categoria}}</span>
+          </p>
+        </div>
+        <img ng-src="{{publicacao.imagem}}" alt="" />
+        <div class="item">
+          <button
+            class="button button-positive button-small"
+            ng-click="ler(publicacao.id)"
+          >
+            Ler mais
+          </button>
+        </div>
+      </article>
+    </main></ion-content
+  ></ion-view
+>

@@ -1,0 +1,31 @@
+<ion-side-menus>
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-buttons side="left">
+        <button
+          class="button button-icon ion-navicon"
+          menu-toggle="left"
+          aria-label="Abrir menu"
+        ></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-positive"
+      ><h1 class="title">Portal UCSal</h1></ion-header-bar
+    >
+    <ion-content>
+      <a class="item" menu-close ui-sref="portal.mural">Mural</a>
+      <a class="item" menu-close ui-sref="portal.perfil">Meu cadastro</a>
+      <a class="item" menu-close ui-sref="portal.financeiro">Financeiro</a>
+      <button
+        class="button button-positive button-block"
+        menu-close
+        ng-click="sair()"
+      >
+        Sair
+      </button>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

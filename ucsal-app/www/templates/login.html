@@ -1,0 +1,24 @@
+<ion-view hide-nav-bar="true"
+  ><ion-content class="padding"
+    ><main class="login">
+      <h1>Portal do Aluno UCSal</h1>
+      <form name="loginForm" ng-submit="entrar(loginForm)" novalidate>
+        <label class="item item-input item-stacked-label"
+          ><span class="input-label">Matrícula</span
+          ><input type="text" ng-model="dados.matricula" required
+        /></label>
+        <label class="item item-input item-stacked-label"
+          ><span class="input-label">Senha</span
+          ><input type="password" ng-model="dados.senha" required
+        /></label>
+        <p role="alert" class="erro" ng-if="erro">{{erro}}</p>
+        <button
+          class="button button-positive button-block"
+          ng-disabled="loginForm.$invalid"
+        >
+          Entrar
+        </button>
+      </form>
+    </main></ion-content
+  ></ion-view
+>

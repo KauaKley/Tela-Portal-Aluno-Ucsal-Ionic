@@ -1,0 +1,57 @@
+:root {
+  --marinho: #102e54;
+  --claro: #dceeff;
+  --branco: #fff;
+}
+body,
+.pane,
+.view {
+  background: #f2f6fb;
+}
+.bar.bar-positive,
+.button.button-positive {
+  background: var(--marinho);
+  border-color: var(--marinho);
+  color: var(--branco);
+}
+main {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.login {
+  max-width: 400px;
+  margin: 48px auto;
+}
+.login h1 {
+  color: var(--marinho);
+  font-size: 28px;
+}
+.card img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: var(--claro);
+}
+.categoria,
+.status {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.categoria {
+  background: var(--claro);
+  color: var(--marinho);
+}
+.paga {
+  background: #dcf4e5;
+  color: #15522e;
+}
+.pendente {
+  background: #fff0c6;
+  color: #694700;
+}
+.erro {
+  color: #a32121;
+  margin-top: 8px;
+}

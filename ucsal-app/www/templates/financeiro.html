@@ -1,0 +1,36 @@
+<ion-view view-title="Financeiro"
+  ><ion-content class="padding"
+    ><main>
+      <label class="item item-input item-select"
+        ><span class="input-label">Semestre letivo</span>
+        <select
+          ng-model="filtro.semestre"
+          ng-options="semestre for semestre in semestres"
+        ></select
+      ></label>
+      <article
+        class="list card"
+        ng-repeat="parcela in parcelas | filter:filtro:true track by parcela.mes"
+      >
+        <div class="item item-text-wrap">
+          <h2>{{parcela.mes}}</h2>
+          <p>
+            Vencimento {{parcela.vencimento}} · {{parcela.valor | currency:'R$
+            ':2}}
+          </p>
+          <span class="status" ng-class="parcela.paga ? 'paga' : 'pendente'"
+            >{{parcela.paga ? 'Paga' : 'A Pagar'}}</span
+          >
+        </div>
+        <div class="item" ng-if="!parcela.paga">
+          <button
+            class="button button-positive button-small"
+            ng-click="copiar(parcela.codigo)"
+          >
+            Copiar código de barras
+          </button>
+        </div>
+      </article>
+    </main></ion-content
+  ></ion-view
+>
